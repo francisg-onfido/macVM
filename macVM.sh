@@ -61,5 +61,5 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 echo "Opening tunnel..."
 mkdir /tmp/gui
 curl -o /tmp/gui/z.$$ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip && (cd /tmp/gui && unzip /tmp/gui/z.$$) && rm /tmp/gui/z.$$
-/tmp/gui/ngrok authtoken 1hTflrwncelU7Uexv9bmSYiHKOl_54pPSvNe5XxEydJm1uHD4 --config /tmp/gui/ngrok.yml
+/tmp/gui/ngrok authtoken 2G4oBGOz6r3E0zbDfjZEwokbYbp_B2BSxysSJmRkx9dKvJPv--config /tmp/gui/ngrok.yml
 /tmp/gui/ngrok tcp 5900 -log=stdout --config /tmp/gui/ngrok.yml
