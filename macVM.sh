@@ -58,7 +58,7 @@ sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersi
 curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.4.3-darwin-x86_64.tar.gz
 tar xzvf elastic-agent-8.4.3-darwin-x86_64.tar.gz
 cd elastic-agent-8.4.3-darwin-x86_64
-sudo ./elastic-agent install --url=https://a3d5eb79fcb741e2af3179ea7138e470.fleet.europe-west1.gcp.cloud.es.io:443 --enrollment-token=R0FNOXhvTUJyRElaN1lKY2ZFNGE6QWd3Q2ZHTUxUbUdGaUxha1doV0xsQQ==
+## sudo ./elastic-agent install --url=https://a3d5eb79fcb741e2af3179ea7138e470.fleet.europe-west1.gcp.cloud.es.io:443 --enrollment-token=R0FNOXhvTUJyRElaN1lKY2ZFNGE6QWd3Q2ZHTUxUbUdGaUxha1doV0xsQQ==
 
 # allow remote access for new admin
 echo "Enabling remote access..."
