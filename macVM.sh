@@ -56,7 +56,9 @@ sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersi
 
 # allow remote access for new admin
 echo "Enabling remote access..."
+sudo rm -f /Library/Preferences/com.apple.windowserver.plist
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
+sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -anget -restart
 # Reverse tunnel to screen share port
 echo "Opening tunnel..."
 mkdir /tmp/gui
