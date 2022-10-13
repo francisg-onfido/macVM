@@ -54,11 +54,16 @@ sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenDiagnosticsProd
 sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenSiriProductVersion "${sw_vers}"
 sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"      
 
+## adding elastic agent
+curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.4.3-darwin-x86_64.tar.gz
+tar xzvf elastic-agent-8.4.3-darwin-x86_64.tar.gz
+cd elastic-agent-8.4.3-darwin-x86_64
+sudo ./elastic-agent install --url=https://a3d5eb79fcb741e2af3179ea7138e470.fleet.europe-west1.gcp.cloud.es.io:443 --enrollment-token=R0FNOXhvTUJyRElaN1lKY2ZFNGE6QWd3Q2ZHTUxUbUdGaUxha1doV0xsQQ==
+
 # allow remote access for new admin
 echo "Enabling remote access..."
 sudo rm -f /Library/Preferences/com.apple.windowserver.plist
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
-sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -anget -restart
 # Reverse tunnel to screen share port
 echo "Opening tunnel..."
 mkdir /tmp/gui
