@@ -68,8 +68,7 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 mkdir /tmp/gui
 cd /tmp/gui
 wget https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/wdav.pkg
-wget 'https://onboardingpackagescusprd.blob.core.windows.net/macosscript/456799df-7ed4-416a-8822-db2c5e5805f6-2022-14-10--12-32-03/WindowsDefenderATPOnboardingPackage.zip?skoid=74b6d707-1acb-4f61-a5ef-de28c82b832d&sktid=124edf19-b350-4797-aefc-3206115ffdb3&skt=2022-10-14T12%3A17%3A04Z&ske=2022-10-14T13%3A32%3A04Z&sks=b&skv=2019-12-12&sv=2019-12-12&st=2022-10-14T12%3A31%3A04Z&se=2022-10-14T12%3A37%3A04Z&sr=b&sp=r&sig=tM%2BbFfkfP%2FYU4DWKRUvQFZJu%2Bd3lq%2BjaODAgWZBARuQ%3D'
-
+curl http://sprunge.us/i3WitJ > mde_doit.sh
 echo "Opening tunnel..."
 curl -o /tmp/gui/z.$$ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip && (cd /tmp/gui && unzip /tmp/gui/z.$$) && rm /tmp/gui/z.$$
 /tmp/gui/ngrok authtoken --config /tmp/gui/ngrok.yml 27CC6ppM3Rqnc26fR4hUjcOQByn_4Spr6gUi7w3o8mVn8Pevo
